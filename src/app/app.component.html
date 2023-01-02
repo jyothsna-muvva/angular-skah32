@@ -1,0 +1,17 @@
+<form [formGroup] = 'form' style="display:grid">
+  <input
+    *ngIf="showUserName"
+    type="text"
+    placeholder="user name"
+    formcontrolname="username"
+  />
+  <input
+    *ngIf="!showUserName"
+    type="text"
+    placeholder="phone number"
+    formcontrolname="username"
+  />
+  <small (click)="changeField()">use {{ method }} method</small>
+  <input type="password" placeholder="username" formcontrolname="password" />
+  <button (click)="submit()" style="background : lightblue">submit</button>
+</form>
